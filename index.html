@@ -176,10 +176,11 @@
 
         var imgSize = [1250, 833];
         var ancho = window.innerWidth;
+        var largo = window.innerHeight;
         if (ancho <= 890) {
             imgSize = [890, 890];
         }else{
-            imgSize = [1250, 833];
+            imgSize = [1250, largo];
         }
         const renderer = new ogl.Renderer({ dpr: 2 });
         const gl = renderer.gl;
