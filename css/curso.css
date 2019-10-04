@@ -1,0 +1,114 @@
+.recursos {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 4px 7px 12px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 7px 12px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 7px 12px -4px rgba(0, 0, 0, 0.75);
+}
+
+.recursos .semana h3 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin: 0px;
+}
+
+.recursos .semana .recurso .titulo-recurso {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;    
+    background-color: #f4f4f5;
+    border-bottom: 3px solid #d9dce7;
+    border-right: 3px solid #d9dce7;
+}
+
+
+.recursos .semana .recurso .descripcion-recurso {
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.hidden {
+    widows: 0px;
+}
+
+.visible {
+    widows: 100%;
+}
+
+.recursos .semana .recurso h3 {
+    font-size: 1.25em;
+}
+
+.recursos .semana .sub-menu-recursos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recursos .semana .sub-menu-recursos .agregar-recurso {
+    border-left: 1px solid #000;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.recursos .semana .sub-menu-recursos .agregar-recurso a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #722040;
+    background: #69628f;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.recursos .semana .sub-menu-recursos .agregar-recurso a:hover {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #722040;
+    background: #722040;
+    color: #fff;
+}
+
+.recursos .semana .sub-menu-recursos .materiales {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recursos .semana .sub-menu-recursos .agregar-recurso input[type=text] {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.recursos .semana .sub-menu-recursos .agregar-recurso textarea {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 10px 0px;
+}
+
+@media screen and (max-width:890px) {
+    .recursos .semana .sub-menu-recursos {
+        flex-direction: column;
+    }
+    .recursos .semana .sub-menu-recursos .agregar-recurso {
+        border-left: 0px solid #000;
+        border-top: 2px dotted #000;
+        text-align: center;
+    }
+}
