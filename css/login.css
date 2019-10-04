@@ -271,7 +271,6 @@
   .wrap-login100 {
     width: 100%;
     background: #fff;
-    overflow: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -280,6 +279,7 @@
     flex-wrap: wrap;
     align-items: stretch;
     flex-direction: row-reverse;
+    overflow: hidden;
   }
   
   /*==================================================================
@@ -315,7 +315,7 @@
     display: block;
     z-index: 100;
     background: #fff;
-    padding: 173px 55px 55px 55px;
+    padding: 103px 55px 55px 55px;
   }
   
   .login100-form-title {
