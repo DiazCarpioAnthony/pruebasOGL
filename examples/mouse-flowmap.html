@@ -16,16 +16,14 @@
         import {Flowmap} from '../src/Extras.js';
         
         const vertex = `
-            attribute vec2 uv;
-            attribute vec2 position;
-
-            varying vec2 vUv;
-
-            void main() {
-                vUv = uv;
-                gl_Position = vec4(position, 0, 1);
-            }
-        `;
+					attribute vec2 uv;
+					attribute vec2 position;
+					varying vec2 vUv;
+					void main() {
+							vUv = uv;
+							gl_Position = vec4(position, 0, 1);
+					}
+			`;
 
         const fragment = `
             precision highp float;
@@ -40,13 +38,13 @@
             void main() {
                 
                 // R and G values are velocity in the x and y direction
-                // B value is the velocity length
-                vec3 flow = texture2D(tFlow, vUv).rgb;
-
-                // Use flow to adjust the uv lookup of a texture
-                vec2 uv = gl_FragCoord.xy / 600.0;
-                uv += flow.xy * 0.05;
-                vec3 tex = texture2D(tWater, uv).rgb;
+// B value is the velocity length
+vec3 flow = texture2D(tFlow, vUv).rgb;
+// Use flow to adjust the uv lookup of a texture
+vec2 uv = gl_FragCoord.xy / 600.0;
+uv += flow.xy * 0.05;
+vec3 tex = texture2D(tWater, uv).rgb;
+gl_FragColor = vec4(flow.rgb, 1.0);
 
                 // Oscillate between raw values and the affected texture above
                 tex = mix(tex, flow * 0.5 + 0.5, smoothstep( -0.3, 0.7, sin(uTime)));
@@ -72,7 +70,6 @@
             }
             window.addEventListener('resize', resize, false);
             resize();
-
             const flowmap = new Flowmap(gl);
 
             // Triangle that includes -1 to 1 range for 'position', and 0 to 1 range for 'uv'.
@@ -84,7 +81,7 @@
             const texture = new Texture(gl, {wrapS: gl.REPEAT, wrapT: gl.REPEAT});
             const img = new Image();
             img.onload = () => texture.image = img;
-            img.src = 'assets/water.jpg';
+            img.src = '../img/demo1.jpg';
 
             const program = new Program(gl, {
                 vertex,
